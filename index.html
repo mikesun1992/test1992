@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script language="javascript" type="text/javascript" src="jquery-3.1.1.js"></script>
+<body>
+	<input id="btnsubmit" type="button" value="JqueryAJAX" />
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+$("#btnsubmit").click(function(){
+$.ajax({
+url:"index.php",
+data:"a=1&b=2",
+type:"post",
+dataType:"html",
+success:function(msg){
+alert("处理的结果为："+msg);
+	}
+});
+	});
+});
+</script>
+</body>
+</html>
